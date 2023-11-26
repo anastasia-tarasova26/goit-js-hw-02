@@ -10,11 +10,11 @@ const message6 = "Get rid of sPaM emails. Our book in on sale!"; // true
 const message7 = "[SPAM] How to earn fast money?"; // true
 
 function checkForSpam(message) {
-  const hasSpam1 = message.toLowerCase().includes(banWord1);
-  const hasSpam2 = message.toLowerCase().includes(banWord2);
+  const hasSpam1 =
+    message.toLowerCase().includes(banWord1) ||
+    message.toLowerCase().includes(banWord2);
 
   console.log(hasSpam1);
-  console.log(hasSpam2);
 }
 
 checkForSpam(message1);
